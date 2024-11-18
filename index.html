@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook - K1 - M14.5</h1>
+
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1</option>
+                <option value="K2">K2</option>
+                <option value="K3">K3</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <h2 id="selected-level" class="level-title">Nivel: K1</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0 -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+        <div class="subtitle">Asegúrate de tener listos todos los materiales indicados en la DIAPOSITIVA 1 antes de iniciar la misión.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Asegúrate de tener listos todos los materiales indicados en la Diapositiva 1 antes de iniciar la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Dar la bienvenida a los niños, presentar el enfoque del día y preparar sus mentes para la actividad.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 2 “Bienvenida” y saluda a los niños mientras muestras el logo de Gnius Club, luego introduce el tema del día y la necesidad de entrenar el cerebro para la misión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Hola, Genios del CODE SQUAD! Bienvenidos a una nueva aventura. Hoy viajaremos a la galaxia Melodía para ayudar a la Banda Estelar a preparar su gran concierto. Sus instrumentos están desordenados, y necesitan nuestra ayuda para organizarlos. ¿Están listos para entrenar sus cerebros y salvar el día? ¡Vamos, Genios!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 3 "Gimnasio CODE SQUAD" e introduce la importancia de entrenar el cerebro antes de enfrentar el reto del día.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Atención, CODE SQUAD! Antes de empezar nuestra misión, vamos a calentar nuestros cerebros en el Gimnasio del CODE SQUAD. Escuchen con atención las instrucciones de la canción y sigan los movimientos. ¡Este entrenamiento nos hará más rápidos y fuertes para nuestra misión en la galaxia Melodía!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-secuenciacion')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Preparar a los niños para la misión con un ejercicio de algoritmos a través de un baile.</div>
+    </div>
+    <div id="baile-secuenciacion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la Diapositiva 4 “Baile de Algoritmos” e introduce la canción que seguiremos hoy.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Genios! Es hora de mostrar nuestros mejores pasos siguiendo la secuencia de esta canción intergaláctica. Recuerden, si se pierden, sigan practicando y juntos lo lograremos. ¡A movernos como las estrellas del espacio!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">🌌 Actividad 3: Planteamiento del Problema ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Introducir a los niños en el contexto de la misión utilizando la historia.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la DIAPOSITIVA 5, adopta la actitud de cuenta cuentos y narra la historia.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡Genios del CODE SQUAD! Estamos en la galaxia Melodía, donde vive la famosa Banda Estelar. Ellos están a punto de dar un gran concierto que será transmitido a todas las estrellas cercanas. Pero algo terrible sucedió: los instrumentos musicales se han desordenado mientras viajaban por el espacio. ¡Oh no! Los integrantes de la banda están preocupados y no saben cómo organizarlos. ¿Podemos ayudarlos a que el concierto sea un éxito? ¡Vamos a descubrirlo juntos!"
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la DIAPOSITIVA 6 y explica el reto para motivar al CODE SQUAD.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡CODE SQUAD! La Banda Estelar nos ha pedido ayuda para organizar los instrumentos antes del concierto. Cada instrumento tiene un lugar especial en el escenario, y nosotros debemos colocarlos en el orden correcto. Pero cuidado, si los colocamos mal, no podrán tocar su música mágica. Vamos a usar nuestro conocimiento de secuenciación para ordenar los instrumentos. ¡Tenemos que hacerlo antes de que empiece el espectáculo!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: Formación de Parejas ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Explicar la importancia del trabajo en equipo en parejas y asegurar la organización.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 7 “Formación de Equipos”, explica la importancia de trabajar en equipo y junta a los niños en pares. Si el número es impar, integra un trío para asegurar que todos tengan compañeros.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¡CODE SQUAD! Cuando trabajamos juntos, ¡logramos cosas increíbles! Es como armar un rompecabezas: cada pieza es importante y, cuando se unen, crean algo maravilloso. Recuerden, "Dos cabezas piensan mejor que una". Ahora, busquen a un compañero con quien trabajar. Si somos un número impar, yo ayudaré a formar un trío especial. ¡Vamos a formar parejas y prepararnos para esta misión estelar!"
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos los niños estén emparejados y organizados para trabajar.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                "¿Listos, CODE SQUAD? Veo que ya tienen a sus compañeros. Recuerden, trabajar en equipo significa escuchar, compartir ideas y ayudarse mutuamente. ¿Están todos listos? ¡Perfecto! Ahora vamos a prepararnos para hacer un gran trabajo juntos. ¡Estoy seguro de que seremos la mejor banda estelar!"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('codigo_visual')">
+        <div class="title">🎨 Actividad 5: Reto de Codificación ⏰ Tiempo: Variable <span id="activity-5-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir los retos de codificación según la edad y trabajar con bloques de colores.</div>
+    </div>
+    <div id="codigo_visual" class="content">
+        <table id="activity-5-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('intercambio_construccion')">
+        <div class="title">🔄 Actividad 6: Intercambio de Códigos y Construcción ⏰ Tiempo: Variable <span id="activity-6-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Intercambio de códigos entre equipos y práctica de secuenciación con bloques.</div>
+    </div>
+    <div id="intercambio_construccion" class="content">
+        <table id="activity-6-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('obstaculo_historia')">
+        <div class="title">⚠️ Actividad 7: Mensaje del Cuartel ⏰ Tiempo: Variable <span id="activity-7-total-time">Variable según el nivel</span></div>
+        <div class="subtitle">Introducir un obstáculo en la narrativa para mantener el interés y la motivación.</div>
+    </div>
+    <div id="obstaculo_historia" class="content">
+        <table id="activity-7-content">
+            <!-- Contenido insertado dinámicamente por JavaScript -->
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion_reflexion')">
+        <div class="title">🏁 Actividad 8: Conclusión de la Historia y Reflexión ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Cierre de la misión y reflexión sobre lo aprendido durante la clase.</div>
+    </div>
+    <div id="conclusion_reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la DIAPOSITIVA 25 y cuenta el desenlace de la historia, luego guía la reflexión con preguntas.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> 
+                    "¡Genios del CODE SQUAD! ¡Lo logramos! Gracias a su creatividad y trabajo en equipo, la Banda Estelar ahora está lista para dar su concierto. Los instrumentos están perfectamente organizados, y los músicos están felices y listos para tocar sus canciones favoritas. ¡Qué orgullo ver lo que lograron juntos! Ahora, reflexionemos un poco:
+1. ¿Cómo nos ayudó el código a organizar los instrumentos?
+2. ¿Qué fue lo más divertido de trabajar en equipo?
+3. ¿Qué aprendimos hoy sobre seguir patrones y organizar las cosas?"
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+               <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            } else {
+            content.style.display = "block";
+        }
+    }
+
+    function updateContent() {
+        var time = document.getElementById("class-time").value;
+        var level = document.getElementById("class-level").value;
+        document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+        document.getElementById("selected-level").innerText = "Nivel: " + level;
+
+        var steps = {
+    "K1": {
+        "5.1": [
+            {
+                "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                "accion": "Reproduce la DIAPOSITIVA 9, entrega papel y materiales a cada equipo.",
+                "dialogo": "Aquí tienen su papel y colores. Dibujen el micrófono, la guitarra y el tambor. Luego, asignenles los bloques de color como hablamos. ¡Recuerden que esto será el código para organizar el concierto!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 8 y distribuye papel y colores. Explica que cada equipo creará un código para organizar tres farolillos.",
+                "dialogo": "Aquí tienen su papel y colores. Dibujen los farolillos mágicos y asignen un bloque de color a cada uno. Trabajen juntos para hacer el código más bonito y colorido. ¡A codificar!"
+            },
+            {
+                "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 10, guía a los niños para crear su código visual en parejas.",
+                "dialogo": "Trabajen juntos para dibujar sus códigos. Recuerden asignar bloques de colores a cada instrumento. ¡Vamos a organizarnos para que el concierto sea un éxito!"
+            }
+        ],
+        "6": [
+            {
+                "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 17 y dirige a los niños para intercambiar los códigos que crearon.",
+                "dialogo": "¡CODE SQUAD! ¡Gran trabajo creando sus códigos! Ahora vamos a intercambiarlos para ver cómo los instrumentos musicales de sus compañeros pueden organizarse. Haré un intercambio entre los equipos. ¿Están listos? ¡Vamos a descubrir cómo se ven otros códigos! ¡Es como resolver un misterio!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 18 “Reto de Reconocimiento de Patrones 3 años”, entrega los códigos intercambiados a los equipos y supervisa.",
+                "dialogo": "¡Adelante, CODE SQUAD! Usemos el código de sus compañeros para organizar los instrumentos: micrófono, guitarra y tambor. Recuerden seguir el orden que está en el código para armar los bloques correctamente. ¡Vamos a ver qué tan bien lo hacen!"
+            }
+        ],
+        "7": [
+            {
+                "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                "accion": "Reproduce la DIAPOSITIVA 21 y explica el obstáculo a los niños.",
+                "dialogo": "¡CODE SQUAD! ¡Atención! Los instrumentos estaban listos, pero justo antes del ensayo, ¡un viento galáctico desordenó todo! Ahora están mezclados, y la banda no puede comenzar. Desde el Cuartel General nos han enviado un nuevo código para organizar todo de nuevo. ¡Trabajemos juntos para salvar el concierto!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 22 “Reto Galáctico K1” y motiva a los niños a seguir el nuevo código proyectado.",
+                "dialogo": "¡CODE SQUAD! En la pantalla tienen el nuevo código que ayudará a organizar los instrumentos: micrófono, tambor y guitarra. ¡Sigamos el patrón con cuidado para que la banda pueda ensayar de nuevo! ¡Manos a la obra!"
+            }
+        ]
+    },
+   "K2": {
+        "5.2": [
+            {
+                "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                "accion": "Reproduce la DIAPOSITIVA 11 y explica a los niños en qué consiste el reto.",
+                "dialogo": "¡CODE SQUAD! Para que los músicos puedan ensayar, necesitamos organizar mejor los instrumentos. Usaremos bloques de colores para representar los instrumentos: micrófono azul, guitarra roja, tambor amarillo y teclado verde. ¡Ustedes pueden elegir otros colores también!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 12, entrega papel y materiales a cada equipo.",
+                "dialogo": "Aquí tienen su papel y colores. Dibujen el micrófono, la guitarra, el tambor y el teclado. Luego, asignenles bloques de color. ¡Hagan sus códigos para ayudar a la banda!"
+            },
+            {
+                "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 13, guía a los niños para crear su código visual en parejas.",
+                "dialogo": "¡Vamos a crear nuestros códigos! Recuerden asignar bloques de colores para cada instrumento. Trabajen en equipo para asegurarse de que todo esté listo para el concierto."
+            }
+        ],
+        "6": [
+            {
+                "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 17 y dirige a los niños para intercambiar los códigos que crearon.",
+                "dialogo": "¡CODE SQUAD! ¡Gran trabajo creando sus códigos! Ahora vamos a intercambiarlos para ver cómo los instrumentos musicales de sus compañeros pueden organizarse. Haré un intercambio entre los equipos. ¿Están listos? ¡Vamos a descubrir cómo se ven otros códigos! ¡Es como resolver un misterio!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 19 “Reto de Reconocimiento de Patrones 4 años”, entrega los códigos intercambiados a los equipos y supervisa.",
+                "dialogo": "¡CODE SQUAD, vamos a construir! Usen el código que recibieron para organizar los instrumentos: micrófono, guitarra, tambor y teclado. ¡Recuerden que cada bloque tiene un lugar específico según el código!"
+            }
+        ],
+        "7": [
+            {
+                "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                "accion": "Reproduce la DIAPOSITIVA 21 y explica el obstáculo a los niños.",
+                "dialogo": "¡CODE SQUAD! ¡Atención! Los instrumentos estaban listos, pero justo antes del ensayo, ¡un viento galáctico desordenó todo! Ahora están mezclados, y la banda no puede comenzar. Desde el Cuartel General nos han enviado un nuevo código para organizar todo de nuevo. ¡Trabajemos juntos para salvar el concierto!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 23 “Reto Galáctico K2” y motiva a los niños a seguir el nuevo código proyectado.",
+                "dialogo": "¡CODE SQUAD! El código que recibimos organiza cuatro instrumentos: micrófono, tambor, guitarra y teclado. ¡Recuerden el orden correcto y trabajen en equipo para reconstruirlo todo!"
+            }
+        ]
+},
+    "K3": {
+        "5.3": [
+            {
+                "step": 1,
+                "time": { "30": 1, "40": 1, "50": 1 },
+                "accion": "Reproduce la DIAPOSITIVA 14 y explica a los niños en qué consiste el reto.",
+                "dialogo": "¡CODE SQUAD! Los músicos están emocionados, pero necesitamos organizar los instrumentos para que puedan ensayar. Usaremos bloques de colores para representar el micrófono, guitarra, tambor, teclado y platillos. Cada instrumento necesita tres bloques. ¡Manos a la obra!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 15, entrega papel y materiales a cada equipo.",
+                "dialogo": "Dibujen el micrófono, la guitarra, el tambor, el teclado y los platillos. Luego, asignen tres bloques de color a cada instrumento. ¡Sus códigos harán que la banda esté lista!"
+            },
+            {
+                "step": 3,
+                "time": { "30": 5, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 16, guía a los niños para crear su código visual en parejas.",
+                "dialogo": "Trabajen juntos para dibujar los instrumentos y asignar bloques de colores. ¡Es un gran reto, pero sé que pueden lograrlo!"
+            }
+        ],
+        "6": [
+            {
+                "step": 1,
+                "time": { "30": 2, "40": 2, "50": 2 },
+                "accion": "Reproduce la DIAPOSITIVA 17 y dirige a los niños para intercambiar los códigos que crearon.",
+                "dialogo": "¡CODE SQUAD! ¡Gran trabajo creando sus códigos! Ahora vamos a intercambiarlos para ver cómo los instrumentos musicales de sus compañeros pueden organizarse. Haré un intercambio entre los equipos. ¿Están listos? ¡Vamos a descubrir cómo se ven otros códigos! ¡Es como resolver un misterio!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 20 “Reto de Reconocimiento de Patrones 5 años”, entrega los códigos intercambiados a los equipos y supervisa.",
+                "dialogo": "¡CODE SQUAD! Esta es una misión importante: usen los códigos de sus compañeros para organizar los cinco instrumentos: micrófono, guitarra, tambor, teclado y platillos. ¡Sigan el patrón exacto para completar el concierto!"
+            }
+        ],
+        "7": [
+            {
+                "step": 1,
+                "time": { "30": 3, "40": 4, "50": 5 },
+                "accion": "Reproduce la DIAPOSITIVA 20 y explica el obstáculo a los Genios.",
+                "dialogo": "Reproduce la DIAPOSITIVA 21 y explica el obstáculo a los niños.",
+                "dialogo": "¡CODE SQUAD! ¡Atención! Los instrumentos estaban listos, pero justo antes del ensayo, ¡un viento galáctico desordenó todo! Ahora están mezclados, y la banda no puede comenzar. Desde el Cuartel General nos han enviado un nuevo código para organizar todo de nuevo. ¡Trabajemos juntos para salvar el concierto!"
+            },
+            {
+                "step": 2,
+                "time": { "30": 7, "40": 10, "50": 10 },
+                "accion": "Reproduce la DIAPOSITIVA 24 “Reto Galáctico K3” y motiva a los niños a seguir el nuevo código proyectado.",
+                "dialogo": "¡CODE SQUAD! Este es el reto final: organizar los cinco instrumentos (micrófono, tambor, guitarra, teclado y platillos) según el código. ¡Es un reto galáctico! ¡Sé que lo lograrán!"
+            }
+        ]
+    }
+};
+
+
+
+        // Mostrar u ocultar actividades según el nivel seleccionado
+        var activities = {
+            "activity-0": true,
+            "activity-1": true,
+            "activity-2": true,
+            "activity-3": true,
+            "activity-4": true,
+            "activity-5": true,
+            "activity-6": true,
+            "activity-7": steps[level]["7"].some(s => s.time[time] > 0),
+            "activity-8": true
+        };
+
+        Object.keys(activities).forEach(function(activityId) {
+            var activityElement = document.getElementById(activityId);
+            if (activities[activityId]) {
+                activityElement.style.display = "block";
+            } else {
+                activityElement.style.display = "none";
+            }
+        });
+
+        // Renderizar los pasos dinámicamente en las tablas de actividades 5, 6 y 7
+        renderActivitySteps("activity-5-content", steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time);
+        renderActivitySteps("activity-6-content", steps[level]["6"], time);
+        renderActivitySteps("activity-7-content", steps[level]["7"], time);
+
+        document.getElementById("activity-5-total-time").innerText = calculateTotalTime(steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time) + " minutos";
+        document.getElementById("activity-6-total-time").innerText = calculateTotalTime(steps[level]["6"], time) + " minutos";
+        document.getElementById("activity-7-total-time").innerText = calculateTotalTime(steps[level]["7"], time) + " minutos";
+    }
+
+    function renderActivitySteps(contentId, steps, time) {
+        var contentContainer = document.getElementById(contentId);
+        contentContainer.innerHTML = "";
+        steps.forEach(function(step) {
+            if (step.time[time] > 0) {
+                var row = document.createElement("tr");
+                var stepCell = document.createElement("td");
+                var dialogCell = document.createElement("td");
+
+                stepCell.innerHTML = "<strong>PASO " + step.step + " (" + step.time[time] + " minutos):</strong> " + step.accion;
+                dialogCell.innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> " + step.dialogo;
+
+                row.appendChild(stepCell);
+                row.appendChild(dialogCell);
+                contentContainer.appendChild(row);
+            }
+        });
+    }
+
+    function calculateTotalTime(steps, time) {
+        return steps.reduce((total, step) => total + step.time[time], 0);
+    }
+
+    updateContent();
+</script>
